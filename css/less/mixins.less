@@ -1,0 +1,46 @@
+.round(@radius: 5px) {
+	-webkit-border-radius: @radius;
+	-moz-border-radius: 	 @radius;
+	border-radius: 	 @radius;
+	
+	-webkit-background-clip: padding-box;
+	-moz-background-clip:    padding;
+	background-clip: 	    padding-box;
+}
+
+.drop-shadow(@x: 0, @y: 0, @blur: 5px, @spread: 0, @alpha: .16) {
+	-webkit-box-shadow: @x @y @blur @spread rgba(0, 0, 0, @alpha);
+	-moz-box-shadow: 	@x @y @blur @spread rgba(0, 0, 0, @alpha);
+	box-shadow:			@x @y @blur @spread rgba(0, 0, 0, @alpha);
+}
+
+.inner-shadow(@x: 0, @y: 0, @blur: 5px, @spread: 0, @alpha: .2) {
+	-webkit-box-shadow: inset @x @y @blur @spread rgba(0, 0, 0, @alpha);
+	-moz-box-shadow: 	inset @x @y @blur @spread rgba(0, 0, 0, @alpha);
+	box-shadow:			inset @x @y @blur @spread rgba(0, 0, 0, @alpha);
+}
+
+.gradient (@from, @to) {
+	background-color: @from;
+	background-image: -webkit-gradient(linear, left top, left bottom, from(@from), to(@to));
+	background-image: -webkit-linear-gradient(top, @from, @to);
+	background-image:    -moz-linear-gradient(top, @from, @to);
+	background-image:      -o-linear-gradient(top, @from, @to);
+	background-image:         linear-gradient(to bottom, @from, @to);
+}
+
+.box-shadow (@x: 0, @y: 0, @blur: 1px, @color: #000) {
+	-webkit-box-shadow: @arguments;
+	box-shadow: @arguments;
+}
+
+.text-shadow (@x: 0, @y: 0, @blur: 1px, @color: #000) {
+     text-shadow: @arguments;
+}
+
+.transition(@property: color, @duration: .2s) {
+	-webkit-transition: @property @duration ease-out;
+	-moz-transition: @property @duration ease-out;
+	-o-transition: @property @duration ease-out;
+	transition: @property @duration ease-out;
+}
